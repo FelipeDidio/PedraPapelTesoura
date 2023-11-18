@@ -2,6 +2,7 @@
 
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -17,7 +18,9 @@ public class App {
         jogador1 = leitura.nextInt();
 
         System.out.println("Jogador 2, digite sua opção:");
-        jogador2 = leitura.nextInt();
+        int rand = (int)Math.random()*3+1;
+        jogador2 = rand;
+        System.out.println(jogador2);
 
             switch(jogador1){
                 case 1:
@@ -31,8 +34,9 @@ public class App {
                         case 3:
                             System.out.println("O jogador 1 venceu");
                             break;
-                            default: 
+                        default: 
                             System.out.println("Opção inválida");
+                            break;
                     }break;
                 case 2:
                     switch(jogador2){
@@ -45,8 +49,9 @@ public class App {
                         case 3:
                             System.out.println("O jogador 2 venceu");
                             break;
-                            default: 
+                        default: 
                             System.out.println("Opção inválida");
+                            break;
                     }break;
                 case 3:
                     switch(jogador2){
@@ -61,6 +66,7 @@ public class App {
                             break;
                             default: 
                             System.out.println("Opção inválida");
+                            break;
                     }break;
             }
               
